@@ -32,7 +32,7 @@
         --accent-color: #00F5FF;
         --text-primary: #FFFFFF;
         --text-secondary: #64FFDA;
-        /* NUEVO: Color para "El Dolor" */
+        /* Color para "El Dolor" */
         --pain-color: #FF6B6B; 
     }
 
@@ -96,7 +96,8 @@
         0% { transform: translateX(-50px) translateY(-50px) rotate(0deg); }
         25% { transform: translateX(50px) translateY(-25px) rotate(90deg); }
         50% { transform: translateX(25px) translateY(50px) rotate(180deg); }
-        75% { transform: translateX(-25px) translateY(25px) rotate(270deg); }
+
+      75% { transform: translateX(-25px) translateY(25px) rotate(270deg); }
         100% { transform: translateX(-50px) translateY(-50px) rotate(360deg); }
     }
 
@@ -499,7 +500,7 @@
         font-weight: 900;
         position: relative;
         animation: gradientShift 4s ease-in-out infinite;
-s        box-shadow: 
+        box-shadow: 
             0 0 30px rgba(0, 245, 255, 0.4),
             inset 0 0 30px rgba(255, 255, 255, 0.1);
         transition: all 0.4s ease;
@@ -605,7 +606,7 @@ s        box-shadow: 
         margin-bottom: 15px;
     }
 
-    /* NUEVO: Estilo para "El Dolor" */
+    /* Estilo para "El Dolor" */
     .service-pain {
         color: var(--pain-color);
         font-style: italic;
@@ -700,7 +701,7 @@ s        box-shadow: 
         max-width: 1200px;
         margin: 0 auto;
         color: var(--text-secondary);
-    }
+G    }
     
     .footer-content p {
         margin-bottom: 0.5rem;
@@ -711,7 +712,7 @@ s        box-shadow: 
          font-size: 0.9rem;
          color: var(--text-secondary);
          opacity: 0.7;
-    }
+  T  }
 
     /* Responsive Design */
     @media (max-width: 768px) {
@@ -748,10 +749,11 @@ s        box-shadow: 
         transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
+    /* ESTA ES LA REGLA QUE SE CORRIGIÓ */
     .fade-in.visible {
         opacity: 1;
         transform: translateY(0);
-  T  }
+    }
   </style>
 
 </head>
@@ -779,7 +781,7 @@ s        box-shadow: 
    <div class="particle"></div>
    <div class="hero-content">
     <h1 class="company-logo" id="company-name">GM-DATOVATE</h1>
-    <h2 class="hero-title" id="hero-title">De Datos Aislados a un Ecosistema de Negocios Inteligente.</h2>
+a    <h2 class="hero-title" id="hero-title">De Datos Aislados a un Ecosistema de Negocios Inteligente.</h2>
     <p class="hero-subtitle" id="hero-subtitle">Transformamos su operación con datos, automatización e Inteligencia Artificial.</p>
     
     <a href="https://mi-portafolio-de-servicios-gm-datovate.streamlit.app" target="_blank" rel="noopener noreferrer" class="cta-button">
@@ -812,7 +814,7 @@ s        box-shadow: 
       </div>
       <div class="team-card fade-in" style="transition-delay: 0.4s;">
         <div class="team-avatar">
-          <img src="https://i.imgur.com/kF2bWpA.png" alt="Foto de Pablo Mafla">
+  M       <img src="https://i.imgur.com/kF2bWpA.png" alt="Foto de Pablo Mafla">
         </div>
         <h3 class="team-name" id="pablo-name">Pablo Cesar Mafla</h3>
         <p class="team-role" id="pablo-title">Estratega Comercial y de Negocios</p>
@@ -867,7 +869,7 @@ s        box-shadow: 
         <h3 class="service-title">Integración y Automatización</h3>
         <p class="service-pain"><strong>El Dolor:</strong> "Vinculamos clientes con papel. Mi equipo pierde tiempo respondiendo lo mismo en WhatsApp y no hay conexión con agencias de riesgo."</p>
         <p class="service-description"><strong>La Solución:</strong> Unimos todo: vinculación de clientes con firma digital, gestión de riesgo con agencias (Covinoc) y un Agente IA en WhatsApp 24/7.</p>
-      </div>
+A      </div>
     </div>
    </div>
 
@@ -895,7 +897,7 @@ s        box-shadow: 
       data-netlify="true" 
       method="POST" 
       action="/"
-    >
+Note     >
             <input type="hidden" name="form-name" value="contacto" />
       
       <div class="form-group">
@@ -904,7 +906,7 @@ s        box-shadow: 
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+access        <input type="email" id="email" name="email" required>
       </div>
       <div class="form-group">
         <label for="company">Empresa</label>
@@ -935,7 +937,7 @@ s        box-shadow: 
             const elementTop = element.getBoundingClientRect().top;
             const elementVisible = 100; // Se activa un poco antes
             
-            if (elementTop < window.innerHeight - elementVisible) {
+node          if (elementTop < window.innerHeight - elementVisible) {
                 element.classList.add('visible');
             }
         });
@@ -965,12 +967,12 @@ s        box-shadow: 
 
     // Navigation background on scroll
     function handleNavScroll() {
-        const nav = document.querySelector('.nav');
+key      const nav = document.querySelector('.nav');
         if (!nav) return; // Si no hay nav, no hacer nada
         
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) { // Se activa más rápido
-s              nav.style.background = 'rgba(11, 13, 23, 0.95)';
+                nav.style.background = 'rgba(11, 13, 23, 0.95)';
                 nav.style.backdropFilter = 'blur(25px) saturate(180%)';
             } else {
                 nav.style.background = 'rgba(11, 13, 23, 0.85)';
@@ -1004,18 +1006,18 @@ s              nav.style.background = 'rgba(11, 13, 23, 0.95)';
             })
             .then(response => {
                 if (response.ok) {
-                    // Muestra éxito
+                F     // Muestra éxito
                     form.innerHTML = `<h3 style='color: var(--text-primary); text-align: center;'>¡Gracias!</h3><p style='color: var(--text-secondary); text-align: center; margin-top: 1rem;'>Hemos recibido su mensaje. Nuestro equipo se pondrá en contacto con usted muy pronto.</p>`;
                 } else {
                     // Muestra error
-                    throw new Error('Hubo un problema al enviar el formulario.');
+              T     throw new Error('Hubo un problema al enviar el formulario.');
                 }
             })
             .catch(error => {
                 alert(error.message);
                 // Restaura el botón en caso de error
-                submitBtn.textContent = originalBtnText;
-  T              submitBtn.disabled = false;
+  all             submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
             });
         });
     }
