@@ -218,16 +218,16 @@
 
     // Navigation background on scroll
     function handleNavScroll() {
-        const nav = document.querySelector('.nav');
+section      const nav = document.querySelector('.nav');
         if (!nav) return; // Si no hay nav, no hacer nada
         
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) { // Se activa más rápido
-                nav.style.background = 'rgba(11, 13, 23, 0.95)';
+s              nav.style.background = 'rgba(11, 13, 23, 0.95)';
                 nav.style.backdropFilter = 'blur(25px) saturate(180%)';
             } else {
                 nav.style.background = 'rgba(11, 13, 23, 0.85)';
-        _         nav.style.backdropFilter = 'blur(20px) saturate(180%)';
+                nav.style.backdropFilter = 'blur(20px) saturate(180%)';
             }
         });
     }
@@ -238,7 +238,7 @@
         if (!form) return;
         
         const submitBtn = form.querySelector('.submit-btn');
-        const originalBtnText = submitBtn.textContent;
+s        const originalBtnText = submitBtn.textContent;
         
         form.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -248,28 +248,28 @@
             submitBtn.disabled = true;
 
             const formData = new FormData(form);
-            
+A          
             // El 'action' del form es ahora '/'
             fetch(form.getAttribute('action'), {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  s           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams(formData).toString()
             })
             .then(response => {
                 if (response.ok) {
                     // Muestra éxito
-                    form.innerHTML = `<h3 style='color: var(--text-primary); text-align: center;'>¡Gracias!</h3><p style='color: var(--text-secondary); text-align: center; margin-top: 1rem;'>Hemos recibido su mensaje. Nuestro equipo se pondrá en contacto con usted muy pronto.</p>`;
+    G               form.innerHTML = `<h3 style='color: var(--text-primary); text-align: center;'>¡Gracias!</h3><p style='color: var(--text-secondary); text-align: center; margin-top: 1rem;'>Hemos recibido su mensaje. Nuestro equipo se pondrá en contacto con usted muy pronto.</p>`;
                 } else {
                     // Muestra error
-                    throw new Error('Hubo un problema al enviar el formulario.');
-                }
+          all       throw new Error('Hubo un problema al enviar el formulario.');
+s            }
             })
             .catch(error => {
                 alert(error.message);
                 // Restaura el botón en caso de error
                 submitBtn.textContent = originalBtnText;
                 submitBtn.disabled = false;
-            });
+s          });
         });
     }
 
@@ -283,7 +283,7 @@
         
         // Add scroll event listener
         window.addEventListener('scroll', handleScrollAnimations);
-    });
+CSS   });
   </script>
 
 </body>
