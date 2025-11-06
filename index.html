@@ -157,7 +157,7 @@
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+section        <input type="email" id="email" name="email" required>
       </div>
       <div class="form-group">
         <label for="company">Empresa</label>
@@ -175,7 +175,7 @@
   <footer class="footer">
    <div class="footer-content">
     <p>© 2024 GM-DATOVATE. Todos los derechos reservados.</p>
-    <p>Transformando Datos en Decisiones Estratégicas</p>
+s    <p>Transformando Datos en Decisiones Estratégicas</p>
    </div>
   </footer>
 
@@ -187,7 +187,7 @@
         elements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
             const elementVisible = 100; // Se activa un poco antes
-            
+    section       
             if (elementTop < window.innerHeight - elementVisible) {
                 element.classList.add('visible');
             }
@@ -198,15 +198,15 @@
     function handleSmoothScrolling() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+s              e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const target = document.querySelector(targetId);
                 
                 if (target) {
-                    // Calcula la posición del elemento, restando la altura del nav
+s                  // Calcula la posición del elemento, restando la altura del nav
                     const navHeight = document.querySelector('.nav')?.offsetHeight || 0;
                     const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 10; // 10px de margen
-                    
+                s   
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
@@ -218,14 +218,14 @@
 
     // Navigation background on scroll
     function handleNavScroll() {
-section      const nav = document.querySelector('.nav');
-        if (!nav) return; // Si no hay nav, no hacer nada
+        const nav = document.querySelector('.nav');
+  s     if (!nav) return; // Si no hay nav, no hacer nada
         
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) { // Se activa más rápido
-s              nav.style.background = 'rgba(11, 13, 23, 0.95)';
+                nav.style.background = 'rgba(11, 13, 23, 0.95)';
                 nav.style.backdropFilter = 'blur(25px) saturate(180%)';
-            } else {
+T          } else {
                 nav.style.background = 'rgba(11, 13, 23, 0.85)';
                 nav.style.backdropFilter = 'blur(20px) saturate(180%)';
             }
@@ -233,7 +233,7 @@ s              nav.style.background = 'rgba(11, 13, 23, 0.95)';
     }
     
     // Form handling (para Netlify con AJAX)
-    function handleContactForm() {
+F   function handleContactForm() {
         const form = document.getElementById('contact-form');
         if (!form) return;
         
@@ -244,7 +244,7 @@ s        const originalBtnText = submitBtn.textContent;
             e.preventDefault();
             
             // Muestra estado de carga
-            submitBtn.textContent = 'Enviando...';
+service          submitBtn.textContent = 'Enviando...';
             submitBtn.disabled = true;
 
             const formData = new FormData(form);
@@ -252,16 +252,16 @@ A          
             // El 'action' del form es ahora '/'
             fetch(form.getAttribute('action'), {
                 method: 'POST',
-  s           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData).toString()
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+note            body: new URLSearchParams(formData).toString()
             })
             .then(response => {
                 if (response.ok) {
-                    // Muestra éxito
-    G               form.innerHTML = `<h3 style='color: var(--text-primary); text-align: center;'>¡Gracias!</h3><p style='color: var(--text-secondary); text-align: center; margin-top: 1rem;'>Hemos recibido su mensaje. Nuestro equipo se pondrá en contacto con usted muy pronto.</p>`;
+                D     // Muestra éxito
+                    form.innerHTML = `<h3 style='color: var(--text-primary); text-align: center;'>¡Gracias!</h3><p style='color: var(--text-secondary); text-align: center; margin-top: 1rem;'>Hemos recibido su mensaje. Nuestro equipo se pondrá en contacto con usted muy pronto.</p>`;
                 } else {
                     // Muestra error
-          all       throw new Error('Hubo un problema al enviar el formulario.');
+  m               throw new Error('Hubo un problema al enviar el formulario.');
 s            }
             })
             .catch(error => {
@@ -276,14 +276,14 @@ s          });
     // Initialize everything
     document.addEventListener('DOMContentLoaded', function() {
         // Se asegura que todo se ejecute solo si los elementos existen
-        handleScrollAnimations();
+all      handleScrollAnimations();
         handleSmoothScrolling();
         handleNavScroll();
         handleContactForm();
         
         // Add scroll event listener
         window.addEventListener('scroll', handleScrollAnimations);
-CSS   });
+    });
   </script>
 
 </body>
