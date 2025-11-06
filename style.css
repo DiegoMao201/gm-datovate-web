@@ -65,7 +65,7 @@ CSS     --primary-bg: #0B0D17;
         background: 
             linear-gradient(45deg, transparent 30%, rgba(0, 245, 255, 0.02) 50%, transparent 70%),
             linear-gradient(-45deg, transparent 30%, rgba(100, 255, 218, 0.02) 50%, transparent 70%);
-s      animation: meshMove 12s linear infinite;
+       animation: meshMove 12s linear infinite;
 }
 
 @keyframes heroGlow {
@@ -246,7 +246,7 @@ section        animation: logoShadow 2s ease-in-out infinite alternate;
         top: 65%;
         left: 85%;
         background: radial-gradient(circle, var(--text-secondary) 0%, transparent 70%);
-s      animation-delay: 2.5s;
+        animation-delay: 2.5s;
         box-shadow: 0 0 15px var(--text-secondary);
 }
 
@@ -310,7 +310,7 @@ s      animation-delay: 2.5s;
         width: 100%;
         background: rgba(11, 13, 23, 0.85);
         backdrop-filter: blur(20px) saturate(180%);
-s      border-bottom: 1px solid rgba(0, 245, 255, 0.1);
+        border-bottom: 1px solid rgba(0, 245, 255, 0.1);
         z-index: 1000;
         padding: 20px 0;
         transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -478,7 +478,7 @@ section      padding-right: 20px;
         height: 140px;
         border-radius: 50%;
         background: 
-  s       linear-gradient(135deg, var(--accent-color) 0%, var(--text-secondary) 50%, var(--accent-color) 100%),
+          linear-gradient(135deg, var(--accent-color) 0%, var(--text-secondary) 50%, var(--accent-color) 100%),
             radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2), transparent 50%);
         background-size: 200% 200%, 100% 100%;
         margin: 0 auto 25px;
@@ -561,7 +561,7 @@ section      padding-right: 20px;
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
-    s   display: flex; 
+        display: flex; 
         flex-direction: column;
         height: 100%; 
 }
@@ -620,7 +620,7 @@ section      padding-right: 20px;
 }
 
 .contact-content {
-s      max-width: 800px;
+        max-width: 800px;
         margin: 0 auto;
 }
 
@@ -664,7 +664,7 @@ CSS     outline: none;
         color: var(--primary-bg);
         padding: 15px 40px;
         border: none;
-    a   border-radius: 10px;
+        border-radius: 10px;
         font-size: 1.1rem;
         font-weight: 600;
         cursor: pointer;
@@ -675,7 +675,7 @@ CSS     outline: none;
 }
 
 .submit-btn:hover {
-s      transform: translateY(-2px);
+       transform: translateY(-2px);
         box-shadow: 0 10px 25px rgba(0, 245, 255, 0.3);
 }
 
@@ -720,7 +720,7 @@ A   
         
         .nav-links {
             display: none; 
-      s }
+        }
         
         .section-title {
             font-size: 2rem;
